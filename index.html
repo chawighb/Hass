@@ -425,6 +425,34 @@ body{
 @keyframes slideUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
 .notif-item{animation:slideUp .3s ease both}
 
+/* ─── KNOWLEDGE BANNER ─── */
+.kb-scroll{
+  display:flex;gap:10px;
+  overflow-x:auto;padding:0 14px 14px;
+  scroll-snap-type:x mandatory;
+  -webkit-overflow-scrolling:touch;
+}
+.kb-scroll::-webkit-scrollbar{display:none}
+.kb-card{
+  flex-shrink:0;width:220px;border-radius:18px;overflow:hidden;
+  cursor:pointer;scroll-snap-align:start;
+  box-shadow:0 2px 12px rgba(0,0,0,.08);
+  transition:transform .15s;
+  text-decoration:none;display:block;
+}
+.kb-card:active{transform:scale(.97)}
+.kb-card-img{
+  height:110px;display:flex;align-items:flex-end;padding:10px 12px;
+  position:relative;overflow:hidden;
+}
+.kb-card-body{background:#fff;padding:10px 12px 12px}
+.kb-tag{
+  font-size:9px;font-weight:700;padding:2px 8px;border-radius:20px;
+  display:inline-block;margin-bottom:5px;
+}
+.kb-title{font-size:12px;font-weight:700;color:var(--dk);line-height:1.4}
+.kb-meta{font-size:10px;color:var(--g3);margin-top:4px;font-weight:600}
+
 </style>
 </head>
 <body>
@@ -701,6 +729,123 @@ body{
         <div style="flex:1;min-width:0"><div style="font-size:13px;font-weight:700;color:var(--dk)">ระบบถังบำบัดน้ำเสีย</div><div style="font-size:11px;color:var(--g3);margin-top:2px">ตรวจล่าสุด: 05 มิ.ย. 2568</div></div>
         <div class="bd bd-g">ปกติ</div>
       </div>
+
+      <!-- ── KNOWLEDGE BANK ── -->
+      <div class="sec-h" style="margin-top:6px">
+        <span class="sec-t">📚 คลังความรู้บ้าน</span>
+        <a href="https://www.ghbank.co.th/knowledge" target="_blank" style="font-size:11px;color:var(--or);font-weight:700;text-decoration:none">ดูทั้งหมด</a>
+      </div>
+
+      <div class="kb-scroll">
+
+        <!-- Card 1: หน้าฝน -->
+        <a class="kb-card" href="https://www.ghbank.co.th/knowledge/home-rainy-season" target="_blank">
+          <div class="kb-card-img" style="background:linear-gradient(160deg,#1A3A5C,#2D6A9F)">
+            <div style="position:absolute;inset:0;opacity:.3">
+              <svg width="100%" height="100%" viewBox="0 0 220 110" fill="none">
+                <circle cx="40" cy="20" r="30" fill="#4A9FD4" opacity=".4"/>
+                <circle cx="160" cy="10" r="25" fill="#4A9FD4" opacity=".3"/>
+                <line x1="30" y1="55" x2="25" y2="85" stroke="#7EC8E3" stroke-width="1.5" stroke-dasharray="2"/>
+                <line x1="60" y1="50" x2="55" y2="80" stroke="#7EC8E3" stroke-width="1.5" stroke-dasharray="2"/>
+                <line x1="90" y1="55" x2="85" y2="85" stroke="#7EC8E3" stroke-width="1.5" stroke-dasharray="2"/>
+                <line x1="120" y1="50" x2="115" y2="80" stroke="#7EC8E3" stroke-width="1.5" stroke-dasharray="2"/>
+                <line x1="150" y1="55" x2="145" y2="85" stroke="#7EC8E3" stroke-width="1.5" stroke-dasharray="2"/>
+                <line x1="180" y1="50" x2="175" y2="80" stroke="#7EC8E3" stroke-width="1.5" stroke-dasharray="2"/>
+              </svg>
+            </div>
+            <div style="position:relative;z-index:1">
+              <div style="font-size:28px;line-height:1">🌧️</div>
+            </div>
+          </div>
+          <div class="kb-card-body">
+            <div class="kb-tag" style="background:#E8F5FF;color:#1A6FAD">หน้าฝน</div>
+            <div class="kb-title">หน้าฝนต้องดูแลบ้านอย่างไร? 10 จุดสำคัญ</div>
+            <div class="kb-meta">ธนาคาร ธอส. · บทความ</div>
+          </div>
+        </a>
+
+        <!-- Card 2: ปลวก -->
+        <a class="kb-card" href="https://www.ghbank.co.th/knowledge/termite-prevention" target="_blank">
+          <div class="kb-card-img" style="background:linear-gradient(160deg,#3D1A00,#7A3B10)">
+            <div style="position:absolute;inset:0;opacity:.25">
+              <svg width="100%" height="100%" viewBox="0 0 220 110" fill="none">
+                <ellipse cx="110" cy="80" rx="90" ry="20" fill="#C27A2A" opacity=".5"/>
+                <rect x="80" y="20" width="60" height="60" rx="4" fill="#A0522D" opacity=".4"/>
+                <line x1="50" y1="90" x2="170" y2="90" stroke="#8B4513" stroke-width="2"/>
+              </svg>
+            </div>
+            <div style="position:relative;z-index:1">
+              <div style="font-size:28px;line-height:1">🐜</div>
+            </div>
+          </div>
+          <div class="kb-card-body">
+            <div class="kb-tag" style="background:#FFF3E0;color:#E65100">กำจัดปลวก</div>
+            <div class="kb-title">สัญญาณปลวกบุกบ้าน รู้ก่อน ป้องกันได้</div>
+            <div class="kb-meta">ธนาคาร ธอส. · บทความ</div>
+          </div>
+        </a>
+
+        <!-- Card 3: ไฟฟ้า -->
+        <a class="kb-card" href="https://www.ghbank.co.th/knowledge/electrical-safety" target="_blank">
+          <div class="kb-card-img" style="background:linear-gradient(160deg,#1A1A2E,#16213E)">
+            <div style="position:absolute;inset:0;opacity:.35">
+              <svg width="100%" height="100%" viewBox="0 0 220 110" fill="none">
+                <circle cx="110" cy="55" r="35" fill="#FFD700" opacity=".15"/>
+                <path d="M118 25 L100 60 H112 L102 90 L128 50 H116 Z" fill="#FFD700" opacity=".6"/>
+              </svg>
+            </div>
+            <div style="position:relative;z-index:1">
+              <div style="font-size:28px;line-height:1">⚡</div>
+            </div>
+          </div>
+          <div class="kb-card-body">
+            <div class="kb-tag" style="background:#FFF8E1;color:#F57F17">ความปลอดภัย</div>
+            <div class="kb-title">ตรวจระบบไฟฟ้าบ้าน ก่อนเกิดเหตุ</div>
+            <div class="kb-meta">ธนาคาร ธอส. · บทความ</div>
+          </div>
+        </a>
+
+        <!-- Card 4: แอร์ -->
+        <a class="kb-card" href="https://www.ghbank.co.th/knowledge/aircon-maintenance" target="_blank">
+          <div class="kb-card-img" style="background:linear-gradient(160deg,#003D5C,#006494)">
+            <div style="position:absolute;inset:0;opacity:.3">
+              <svg width="100%" height="100%" viewBox="0 0 220 110" fill="none">
+                <path d="M20 50 Q55 35 90 50 Q125 65 160 50 Q195 35 220 50" stroke="#7EC8E3" stroke-width="2" fill="none"/>
+                <path d="M20 65 Q55 50 90 65 Q125 80 160 65 Q195 50 220 65" stroke="#7EC8E3" stroke-width="1.5" fill="none" opacity=".6"/>
+              </svg>
+            </div>
+            <div style="position:relative;z-index:1">
+              <div style="font-size:28px;line-height:1">❄️</div>
+            </div>
+          </div>
+          <div class="kb-card-body">
+            <div class="kb-tag" style="background:#E3F2FD;color:#0277BD">ดูแลแอร์</div>
+            <div class="kb-title">ล้างแอร์เองได้ไหม? คู่มือฉบับครบจบ</div>
+            <div class="kb-meta">ธนาคาร ธอส. · บทความ</div>
+          </div>
+        </a>
+
+        <!-- Card 5: รีโนเวท -->
+        <a class="kb-card" href="https://www.ghbank.co.th/knowledge/home-renovation" target="_blank">
+          <div class="kb-card-img" style="background:linear-gradient(160deg,#2D4A1E,#4A7C2F)">
+            <div style="position:absolute;inset:0;opacity:.3">
+              <svg width="100%" height="100%" viewBox="0 0 220 110" fill="none">
+                <rect x="60" y="30" width="100" height="70" rx="3" fill="#8BC34A" opacity=".3"/>
+                <polygon points="110,10 60,40 160,40" fill="#7CB342" opacity=".4"/>
+              </svg>
+            </div>
+            <div style="position:relative;z-index:1">
+              <div style="font-size:28px;line-height:1">🏠</div>
+            </div>
+          </div>
+          <div class="kb-card-body">
+            <div class="kb-tag" style="background:#F1F8E9;color:#558B2F">รีโนเวท</div>
+            <div class="kb-title">วางแผนรีโนเวทบ้านอย่างไรให้คุ้มค่า</div>
+            <div class="kb-meta">ธนาคาร ธอส. · บทความ</div>
+          </div>
+        </a>
+
+      </div>
       <div style="height:8px"></div>
     </div>
 
@@ -832,90 +977,6 @@ body{
       <div style="padding:0 14px 20px"><button class="cta-btn" onclick="toast('ส่งคำร้องขออนุมัติสินเชื่อแล้ว! ธอส. จะติดต่อกลับภายใน 1 วันทำการ')">ยื่นขอสินเชื่อซ่อมแซม</button></div>
     </div>
 
-    <!-- PRODUCT -->
-    <div class="view" id="view-product">
-      <div style="padding:16px 18px 8px;display:flex;justify-content:space-between;align-items:center">
-        <div>
-          <div style="font-size:20px;font-weight:800;color:var(--dk)">ผลิตภัณฑ์สินเชื่อ</div>
-          <div style="font-size:12px;color:var(--g3);margin-top:3px">ผลิตภัณฑ์พิเศษจาก ธอส. ปี 2569</div>
-        </div>
-        <div style="background:var(--orl);border-radius:10px;padding:5px 12px;font-size:11px;font-weight:700;color:var(--or)">3 รายการ</div>
-      </div>
-
-      <!-- Promo banner -->
-      <div style="margin:0 14px 16px;background:linear-gradient(135deg,#1C1C1E,#2C2C3E);border-radius:18px;padding:16px 18px;overflow:hidden;position:relative">
-        <div style="position:absolute;top:-20px;right:-20px;width:120px;height:120px;background:rgba(255,107,0,.08);border-radius:50%"></div>
-        <div style="position:absolute;bottom:-30px;right:30px;width:80px;height:80px;background:rgba(255,107,0,.05);border-radius:50%"></div>
-        <div style="font-size:10px;font-weight:700;color:rgba(255,149,0,.8);text-transform:uppercase;letter-spacing:1px;margin-bottom:6px">โปรโมชั่นพิเศษ Platinum</div>
-        <div style="font-size:15px;font-weight:800;color:#fff;line-height:1.35">สิทธิพิเศษดอกเบี้ยต่ำสุด<br>สำหรับลูกค้า Platinum</div>
-        <div style="font-size:12px;color:rgba(255,255,255,.6);margin-top:6px">ยื่นกู้ภายใน 31 ธ.ค. 2569 รับดอกเบี้ยพิเศษ</div>
-      </div>
-
-      <!-- Product 1: Retention -->
-      <div class="prod-card" onclick="openProduct('retention')">
-        <div class="prod-hero" style="background:linear-gradient(135deg,#E8F5FF,#F0F8FF)">
-          <div class="prod-tag" style="background:#E8F2FF;color:var(--bl)">🏦 Retention 2569</div>
-          <div class="prod-title">สินเชื่อโครงการ Retention<br>ปี 2569</div>
-          <div class="prod-sub">ปรับลดอัตราดอกเบี้ยพิเศษสำหรับลูกค้าเดิม ธอส.</div>
-          <div style="position:absolute;top:16px;right:16px;width:44px;height:44px;background:#fff;border-radius:12px;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 8px rgba(0,107,255,.15)">
-            <svg width="22" height="22" fill="none" stroke="var(--bl)" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          </div>
-        </div>
-        <div class="prod-body">
-          <div class="prod-row"><span class="prod-label">อัตราดอกเบี้ย</span><span class="prod-value" style="color:var(--bl)">MRR-1.00% ต่อปี</span></div>
-          <div class="prod-row"><span class="prod-label">ระยะเวลา</span><span class="prod-value">สูงสุด 40 ปี</span></div>
-          <div class="prod-row"><span class="prod-label">วงเงินสูงสุด</span><span class="prod-value">ตามมูลค่าหลักประกัน</span></div>
-        </div>
-        <div class="prod-footer">
-          <div style="font-size:11px;color:var(--g3)">สำหรับลูกค้าที่มีสัญญากู้กับ ธอส.</div>
-          <div style="background:var(--bl);color:#fff;font-size:11px;font-weight:700;padding:6px 14px;border-radius:20px">ดูรายละเอียด →</div>
-        </div>
-      </div>
-
-      <!-- Product 2: Developer Plus -->
-      <div class="prod-card" onclick="openProduct('devplus')">
-        <div class="prod-hero" style="background:linear-gradient(135deg,#F5F0FF,#FAF0FF)">
-          <div class="prod-tag" style="background:#F0E8FF;color:var(--pu)">🏗 Developer Plus 2569</div>
-          <div class="prod-title">สินเชื่อ Developer Plus<br>ปี 2569</div>
-          <div class="prod-sub">สำหรับโครงการที่อยู่อาศัยของผู้ประกอบการ</div>
-          <div style="position:absolute;top:16px;right:16px;width:44px;height:44px;background:#fff;border-radius:12px;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 8px rgba(139,92,246,.15)">
-            <svg width="22" height="22" fill="none" stroke="var(--pu)" stroke-width="2" viewBox="0 0 24 24"><path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
-          </div>
-        </div>
-        <div class="prod-body">
-          <div class="prod-row"><span class="prod-label">อัตราดอกเบี้ย</span><span class="prod-value" style="color:var(--pu)">MLR-0.75% ต่อปี</span></div>
-          <div class="prod-row"><span class="prod-label">ระยะเวลา</span><span class="prod-value">สูงสุด 3 ปี (ก่อสร้าง)</span></div>
-          <div class="prod-row"><span class="prod-label">วงเงินสูงสุด</span><span class="prod-value">ไม่เกิน 500 ล้านบาท</span></div>
-        </div>
-        <div class="prod-footer">
-          <div style="font-size:11px;color:var(--g3)">สำหรับนิติบุคคลผู้ประกอบการ</div>
-          <div style="background:var(--pu);color:#fff;font-size:11px;font-weight:700;padding:6px 14px;border-radius:20px">ดูรายละเอียด →</div>
-        </div>
-      </div>
-
-      <!-- Product 3: Repair Loan -->
-      <div class="prod-card" onclick="openProduct('repair')">
-        <div class="prod-hero" style="background:linear-gradient(135deg,#FFF3E8,#FFF8F0)">
-          <div class="prod-tag" style="background:#FFF3E8;color:var(--or)">🔧 สินเชื่อซ่อม-แต่ง</div>
-          <div class="prod-title">สินเชื่อซ่อม – แต่ง<br>บ้านที่กู้กับ ธอส.</div>
-          <div class="prod-sub">ซ่อมแซม ต่อเติม และตกแต่งบ้าน ดอกเบี้ยพิเศษ</div>
-          <div style="position:absolute;top:16px;right:16px;width:44px;height:44px;background:#fff;border-radius:12px;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 8px rgba(255,107,0,.15)">
-            <svg width="22" height="22" fill="none" stroke="var(--or)" stroke-width="2" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
-          </div>
-        </div>
-        <div class="prod-body">
-          <div class="prod-row"><span class="prod-label">อัตราดอกเบี้ย</span><span class="prod-value" style="color:var(--or)">เริ่มต้น 2.50% ต่อปี</span></div>
-          <div class="prod-row"><span class="prod-label">ระยะเวลา</span><span class="prod-value">สูงสุด 10 ปี</span></div>
-          <div class="prod-row"><span class="prod-label">วงเงินสูงสุด</span><span class="prod-value">฿1,200,000</span></div>
-        </div>
-        <div class="prod-footer" style="background:var(--orl)">
-          <div style="font-size:11px;color:#CC5500">⭐ Platinum ดอกเบี้ยพิเศษ 2.50%</div>
-          <div style="background:var(--or);color:#fff;font-size:11px;font-weight:700;padding:6px 14px;border-radius:20px">ยื่นกู้เลย →</div>
-        </div>
-      </div>
-      <div style="height:8px"></div>
-    </div>
-
     <!-- PLAN -->
     <div class="view" id="view-plan">
       <div style="padding:16px 18px 8px"><div style="font-size:20px;font-weight:800;color:var(--dk)">แพ็คเกจดูแลบ้าน</div><div style="font-size:12px;color:var(--g3);margin-top:3px">เลือกแพ็คเกจที่เหมาะกับคุณ</div></div>
@@ -932,11 +993,6 @@ body{
   <div class="bnav">
     <div class="ni active" id="nav-home" onclick="sv('home')"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg><span class="nl">Home</span></div>
     <div class="ni" id="nav-service" onclick="sv('service')"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg><span class="nl">Service</span></div>
-    <div class="ni" id="nav-product" onclick="sv('product')" style="position:relative">
-      <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"/></svg>
-      <span class="nl">Product</span>
-      <div style="position:absolute;top:2px;right:18%;width:8px;height:8px;background:var(--rd);border-radius:50%;border:1.5px solid #fff"></div>
-    </div>
     <div class="ni" id="nav-journal" onclick="sv('journal')"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg><span class="nl">Journal</span></div>
     <div class="ni" id="nav-loan" onclick="sv('loan')"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg><span class="nl">Loan</span></div>
   </div>
@@ -1022,7 +1078,7 @@ body{
       <div style="padding:12px 18px 8px;font-size:10px;font-weight:700;color:var(--g3);text-transform:uppercase;letter-spacing:.8px">ผลิตภัณฑ์ธนาคาร</div>
 
       <!-- Product notification -->
-      <div class="notif-item unread" onclick="closeNotifAndGo('product')">
+      <div class="notif-item unread" onclick="closeNotifAndGo('loan')" style="animation-delay:.1s">
         <div class="notif-icon" style="background:#E8F2FF">
           <svg width="22" height="22" fill="none" stroke="var(--bl)" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
         </div>
